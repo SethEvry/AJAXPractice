@@ -1,0 +1,72 @@
+body {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#form {
+  margin: 0 auto;
+  text-align: center;
+}
+input {
+  font-size: 2rem;
+}
+
+.joke {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(153, 148, 148, 0.849);
+}
+
+p {
+  font-size: 1.4em;
+  width: 360px;
+  height: 1.6em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2px solid black;
+  color: black;
+  background: rgba(184, 177, 177, 0.849);
+  box-shadow: 5px 5px;
+  cursor: pointer;
+}
+
+.focus {
+  z-index: 1000;
+  overflow: visible;
+  white-space: normal;
+  height: 360px;
+  width: 360px;
+  position: fixed;
+  top: 20%;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  pointer-events: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.wrapper::before {
+  content: " ";
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200vw;
+  height: 1200vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
